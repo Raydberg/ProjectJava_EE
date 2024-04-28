@@ -1,0 +1,33 @@
+body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.full-height {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.d-flex {
+    flex-direction: row;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
