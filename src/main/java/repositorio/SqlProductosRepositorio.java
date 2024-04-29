@@ -68,7 +68,25 @@ List<Producto> productos = new ArrayList<Producto>();
 
 	@Override
 	public void crear(Producto producto) {
-		// TODO Auto-generated method stub
+		String sql = "insert into Productos (id,nombre, marca, modelo, proveedor_por_mayor, colores, unidades) values (?,?,?,?,?,?,?)";
+		
+		try(Connection connection = SqlConexion.obtenerConexion();
+				PreparedStatement pre = connection.prepareStatement(sql);
+			)
+		{
+			pre.setInt(1, producto.getId());
+			pre.setString(2, producto.getNombre());
+			pre.setString(3, producto.getMarca());
+			pre.setString(4, producto.getModelo());
+			pre.setString(5, producto.getProveedor());
+			pre.setString(6, producto.getColor());
+			pre.setInt(7, producto.getUnidades());
+			pre.executeUpdate();
+			
+		} catch (SQLException e) {
+			System.out.println("Error en la creacion de productos");
+			e.printStackTrace();
+		}
 
 	}
 

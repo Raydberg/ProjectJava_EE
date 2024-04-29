@@ -7,12 +7,49 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 <%
 
 List<ProductoDTO> productos = (List<ProductoDTO>) request.getAttribute("productos");
 %>
+<section>
+	<form action="./ProductoCrear">
+    <fieldset>
+<legend>Crear</legend>
+    <div class="form-floating ">
+		<input class="form-control  " type="text" name="id" id="id">
+        <label for="id">ID</label>
+	</div>
+	<div class="form-floating ">
+		<input class="form-control " type="text" name="nombre" id="nombre">
+		<label for="nombre">Nombre</label>
+	</div>
+	<div class="form-floating ">
+    <input class="form-control " type="text" name="marca" id="marca">
+	<label for="marca">Marca</label>
+	</div>
+	<div class="form-floating ">
+    <input class="form-control " type="text" name="proveedor" id="proveedor">
+	<label for="proveedor">Proveedor</label>
+	</div>
+	<div class="form-floating">
+		<input class="form-control " type="text" name="color" id="color">
+	 <label for="color">Color</label>
+	</div>
+	<div class="form-floating ">
+    <input class="form-control " type="text" name="unidades" id="unidades">
+	<label for="unidades">Unidades</label>
+	<div>
+		<button class="btn btn-outline-info ">Agregar</button>
+	</div>
+	</div>
+	</fieldset>
+	</form>
+</section>
+
+
 <table border="1">
 		<thead>
 			<tr>
