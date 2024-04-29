@@ -8,13 +8,7 @@
 </head>
 <body>
 
-<%
-String user ="Ryan";
-%>
-
-
-<h1><%=user %></h1>
-<h1>Hola</h1>
+<h1>Hola LoginServlet</h1>
 
 </body>
 </html>
