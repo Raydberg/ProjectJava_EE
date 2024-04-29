@@ -18,12 +18,17 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Nombre</th>
-				<th>Marca</th>
-				<th>Modelo</th>
-				<th>Proveedor</th>
-				<th>Colores</th>
-				<th>Unidades</th>
+				<th>DNI</th>
+				<th>NOMBRE</th>
+				<th>APELLIDO</th>
+				<th>PUESTO</th>
+				<th>FECHA_NAC</th>
+				<th>GENERO</th>
+				<th>DIRECCION</th>
+				<th>TELEFONO</th>
+				<th>EMAIL</th>
+				<th>SALARIO</th>
+				<th>CONTRASEÑA</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -41,6 +46,7 @@
 		out.println("<td>"+trabajador.getDireccion() +"</td>");
 		out.println("<td>"+trabajador.getTelefono() +"</td>");
 		out.println("<td>"+trabajador.getEmail() +"</td>");
+		out.println("<td>"+trabajador.getSalario() +"</td>");		
 		out.println("<td>"+trabajador.getContrasenia() +"</td>");
 		out.println("</tr>");
    }

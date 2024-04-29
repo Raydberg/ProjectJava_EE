@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.Puesto;
 import modelo.Trabajador;
 import modelo.TrabajadorDTO;
 import repositorio.SqlTrabajadoresRepositorio;
@@ -25,6 +26,9 @@ public class AdminServlet extends HttpServlet {
 	TrabajadoresRepositorio tr = new SqlTrabajadoresRepositorio();
 	
 	List<Trabajador> trabajadores = tr.obtenerTodos();
+	List<Puesto> puestos = new ArrayList<Puesto>();
+	puestos.add(new Puesto(1,"Trabajador"));
+	puestos.add(new Puesto(2,"Administrador"));
 	List<TrabajadorDTO> listaTrabajadores = new ArrayList<TrabajadorDTO>();
 	
 	for (Trabajador trabajador : trabajadores) {
@@ -34,7 +38,7 @@ public class AdminServlet extends HttpServlet {
 		trabajadorDTO.setDni(trabajador.getDni());
 		trabajadorDTO.setNombre(trabajador.getNombre());
 		trabajadorDTO.setApellido(trabajador.getApellido());
-		trabajadorDTO.setIdPuesto(trabajador.getIdPuesto());
+		String puesto=puestos.get(trabajador.getIdPuesto()-1).getDescripcion();
 		trabajadorDTO.setFechaNacimiento(trabajador.getFechaNacimiento());
 		trabajadorDTO.setGenero(trabajador.getGenero());
 		trabajadorDTO.setDireccion(trabajador.getDireccion());
