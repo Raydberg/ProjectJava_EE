@@ -2,14 +2,15 @@ package modelo;
 
 public class Producto {
 
-	int id;
+	Integer id;
 	String nombre;
 	String marca;
 	String modelo;
 	String proveedor;
 	String color;
 	int unidades;
-	public Producto(int id, String nombre, String marca, String modelo, String proveedor, String color, int unidades) {
+	public Producto(Integer id, String nombre, String marca, String modelo, String proveedor, String color,
+			int unidades) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -19,10 +20,10 @@ public class Producto {
 		this.color = color;
 		this.unidades = unidades;
 	}
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -60,6 +61,6 @@ public class Producto {
 	}
 	public void setUnidades(int unidades) {
 		this.unidades = unidades;
-	}	
+	}
 	
 }

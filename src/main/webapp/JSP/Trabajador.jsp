@@ -15,13 +15,13 @@
 List<ProductoDTO> productos = (List<ProductoDTO>) request.getAttribute("productos");
 %>
 <section>
-	<form action="./ProductoCrear">
+	<form action="./ProductoCrear" method="post">
     <fieldset>
 <legend>Crear</legend>
-    <div class="form-floating ">
+    <!-- <div class="form-floating ">
 		<input class="form-control  " type="text" name="id" id="id">
         <label for="id">ID</label>
-	</div>
+	</div> -->
 	<div class="form-floating ">
 		<input class="form-control " type="text" name="nombre" id="nombre">
 		<label for="nombre">Nombre</label>
