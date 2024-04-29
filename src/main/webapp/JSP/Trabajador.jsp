@@ -13,7 +13,20 @@
 
 List<ProductoDTO> productos = (List<ProductoDTO>) request.getAttribute("productos");
 %>
-
+<table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Proveedor</th>
+				<th>Colores</th>
+				<th>Unidades</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
 <%
    for(ProductoDTO producto: productos){
 		out.println("<tr>");
@@ -28,6 +41,8 @@ List<ProductoDTO> productos = (List<ProductoDTO>) request.getAttribute("producto
    }
 
 %>
+</tbody>
+	</table>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 package modelo;
 
-public class Trabajador {
+public class TrabajadorDTO {
 	    int id;
 	    String dni;
 	    String nombre;
@@ -11,23 +11,7 @@ public class Trabajador {
 	    String direccion;
 	    String telefono;
 	    String email;
-	    Double salario;
-	    String contrasenia;
-	    public Trabajador(int id, String dni, String apellido, String nombre, String contrasenia, Double salario, String email, String direccion, String genero, String fechaNacimiento, int idPuesto, String telefono) {
-	        this.id = id;
-	        this.dni = dni;
-	        this.apellido = apellido;
-	        this.nombre = nombre;
-	        this.contrasenia = contrasenia;
-	        this.salario = salario;
-	        this.email = email;
-	        this.direccion = direccion;
-	        this.genero = genero;
-	        this.fechaNacimiento = fechaNacimiento;
-	        this.idPuesto = idPuesto;
-	        this.telefono = telefono;
-	    }
-		public int getId() {
+	    public int getId() {
 			return id;
 		}
 		public void setId(int id) {
@@ -99,7 +83,6 @@ public class Trabajador {
 		public void setContrasenia(String contrasenia) {
 			this.contrasenia = contrasenia;
 		}
-	    
-	    
-	    
+		Double salario;
+	    String contrasenia;
 }

@@ -1,3 +1,5 @@
+<%@page import="modelo.TrabajadorDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,6 +9,45 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>Esto es AdminJSP</h1>
+  
+  <%
+  
+  List<TrabajadorDTO> trabajadores = (List<TrabajadorDTO>) request.getAttribute("trabajadores");
+  %>
+  <table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Proveedor</th>
+				<th>Colores</th>
+				<th>Unidades</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+<%
+   for (TrabajadorDTO trabajador : trabajadores) {
+	   out.println("<tr>");
+		out.println("<td>"+trabajador.getId()+"</td>");
+		out.println("<td>"+trabajador.getDni() +"</td>");
+		out.println("<td>"+trabajador.getNombre() +"</td>");
+		out.println("<td>"+trabajador.getApellido() +"</td>");
+		out.println("<td>"+trabajador.getIdPuesto() +"</td>");
+		out.println("<td>"+trabajador.getFechaNacimiento() +"</td>");
+		out.println("<td>"+trabajador.getGenero() +"</td>");
+		out.println("<td>"+trabajador.getDireccion() +"</td>");
+		out.println("<td>"+trabajador.getTelefono() +"</td>");
+		out.println("<td>"+trabajador.getEmail() +"</td>");
+		out.println("<td>"+trabajador.getContrasenia() +"</td>");
+		out.println("</tr>");
+   }
+
+%>
+</tbody>
+	</table>
+  
 </body>
 </html>
