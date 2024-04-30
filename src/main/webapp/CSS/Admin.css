@@ -8,9 +8,9 @@ body {
 #tableContainer {
 	width: 100%;
 	height: 300px;
-	overflow-y: auto; /* Habilitado de nuevo el scroll */
-	border-radius: 10px; /* Bordes redondeados */
-	border: 1px solid #888; /* Borde de la tabla */
+	overflow-y: auto; 
+	border-radius: 10px; 
+	border: 1px solid #888; 
 }
 #productsTable thead {
 	position: sticky;

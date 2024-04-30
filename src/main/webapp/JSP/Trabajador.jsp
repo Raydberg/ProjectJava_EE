@@ -57,7 +57,7 @@
 							</section>
 							<article id="form-conteiner" style="height: 250px; overflow: auto;">
 								<table id="productsTable" style="width: 100px; height: 250px;" border="1"
-									class="table table-dark table-hover text-white">
+									class="table-sticky table table-dark table-striped table-hover text-white">
 									<thead>
 										<tr>
 											<th>Id</th>
