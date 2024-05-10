@@ -9,9 +9,10 @@
     
 </head>
 <body>
+   <div class="d-flex justify-content-center align-items-center min-vh-100">
     <article class="d-flex  flex-grow-1 align-items-center justify-content-center form-container">
-        <form class="border border-dark d-flex flex-column gap-4 w-75 " action=""  name="frm-reguister">
-            <span class="fw-bolder fs-5  ">Reguistrar</span>
+        <form class="border border-dark d-flex flex-column gap-4 w-25 rounded-4 p-4 " action=""  name="frm-reguister">
+            <span class="fw-bolder fs-5 fs-4 d-flex justify-content-center ">Reguistrar</span>
             <div class="container  form-floating ">
                 <input class="form-control" id="name" type="text" placeholder="Nombre" name="nombre">
                 <label for="name">Nombre</label>
@@ -30,9 +31,10 @@
                 <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-eye-closed"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 9c-2.4 2.667 -5.4 4 -9 4c-3.6 0 -6.6 -1.333 -9 -4" /><path d="M3 15l2.5 -3.8" /><path d="M21 14.976l-2.492 -3.776" /><path d="M9 17l.5 -4" /><path d="M15 17l-.5 -4" /></svg></span>
             </div>
             <button class="btn btn-outline-dark  ">Reguistrar</button>
-            <a class=" text-decoration-none text-danger  " href="./LoginUser.html">Iniciar Sesion</a>
+            <a class=" btn btn-outline-primary " href="./LoginUser.html">Iniciar Sesion</a>
         </form>
     </article>
+   </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 	<script src="JS/ValidacionReguister.js"></script>
